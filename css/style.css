@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+.slide-container {
+  position: relative;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  cursor: grab;
+  gap: 15px;
+  height: 100vh;
+  width: 600px;
+  background-image: url(../img/main-wallpaper.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.slide-container:active {
+  cursor: grabbing; /* Change cursor when dragging */
+}
+
+.container {
+  min-width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.03);
+  color: white;
+  user-select: none; /* Prevents text selection while dragging */
+}
+
+/* .navigetion-bar {
+  height: 3rem;
+  width: 100%;
+  background-color: #000;
+  z-index: 1;
+} */
