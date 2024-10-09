@@ -3,39 +3,158 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #000;
 }
-.slide-container {
+
+/* ?======================over all template====================== */
+/* ?======================over all template====================== */
+
+.main-container {
   position: relative;
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
   cursor: grab;
   gap: 15px;
-  height: 100vh;
-  width: 600px;
+  height: calc(100vh - 3rem);
+  width: 100%;
+  max-width: 600px;
   background-image: url(../img/main-wallpaper.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.slide-container:active {
-  cursor: grabbing; /* Change cursor when dragging */
+.main-container:active {
+  cursor: grabbing; /* !Change cursor when dragging */
 }
 
 .container {
   min-width: 100%;
-  height: 100vh;
+  height: calc(100vh - 3rem);
   background-color: rgba(255, 255, 255, 0.03);
   color: white;
-  user-select: none; /* Prevents text selection while dragging */
+  user-select: none; /* !Prevents text selection while dragging */
 }
 
-/* .navigetion-bar {
-  height: 3rem;
+#navigation-bar {
   width: 100%;
-  background-color: #000;
-  z-index: 1;
-} */
+  max-width: 600px;
+  height: 3rem; /*! DO NOT CHANGE THE VALUE */
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#navigation-bar a {
+  padding: 0.6rem 2.5rem;
+}
+#navigation-bar a i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* ?======================over all template====================== */
+/* ?======================over all template====================== */
+/* *============================================================= */
+/* ?====================inner container tamplate================= */
+/* ?====================inner container tamplate================= */
+
+#container-1 {
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+}
+.search-bar {
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 1 / 5;
+  background-color: rgb(255, 255, 255);
+  margin: 0.7rem 0.5rem 0 0.5rem;
+  border-radius: 50px;
+
+  display: flex;
+  align-items: center;
+}
+
+.search-bar a img {
+  position: absolute;
+  width: 3rem;
+  padding: 0rem 0.3rem;
+  margin-top: -1.5rem;
+}
+
+.search-bar-input {
+  position: absolute;
+  background-color: red;
+  border: none;
+  outline: none;
+  width: 60%;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  left: 4rem;
+}
+
+.search-bar button {
+  position: absolute;
+  right: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.searchBar-clock-space {
+  grid-row: 2 / 3;
+  grid-column: 1 / 5;
+  border-radius: 50px;
+}
+.clock {
+  grid-row: 3 / 5;
+  grid-column: 1 / 5;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50px;
+}
+.clock-app-space {
+  grid-row: 5 / 11;
+  grid-column: 1 / 5;
+  border-radius: 50px;
+}
+.app-1 {
+  grid-row: 11 / 13;
+  grid-column: 1 / 2;
+  border-radius: 50px;
+}
+.app-2 {
+  grid-row: 11 / 13;
+  grid-column: 2 / 3;
+  border-radius: 50px;
+}
+.app-3 {
+  grid-row: 11 / 13;
+  grid-column: 3 / 4;
+  border-radius: 50px;
+}
+.app-4 {
+  grid-row: 11 / 13;
+  grid-column: 4 / 5;
+  border-radius: 50px;
+}
+
+.app {
+  position: relative;
+}
+
+.app a img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  max-width: 5rem;
+}
+
+/* ?====================inner container tamplate================= */
+/* ?====================inner container tamplate================= */
