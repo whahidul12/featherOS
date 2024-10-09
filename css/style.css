@@ -68,7 +68,6 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 .search-bar {
-  position: relative;
   grid-row: 1 / 2;
   grid-column: 1 / 5;
   background-color: rgb(255, 255, 255);
@@ -77,34 +76,29 @@ body {
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-
-.search-bar a img {
-  position: absolute;
-  width: 3rem;
-  padding: 0rem 0.3rem;
-  margin-top: -1.5rem;
+.search-bar a {
+  margin: 0.5rem 0 0.2rem 0.5rem;
 }
-
 .search-bar-input {
-  position: absolute;
-  background-color: red;
+  font-size: 1.3rem;
   border: none;
-  outline: none;
-  width: 60%;
-  padding: 0.5rem;
-  font-size: 1.5rem;
-  left: 4rem;
+  background-color: transparent;
+  width: 100%;
+  margin: 0 0.5rem;
 }
 
 .search-bar button {
-  position: absolute;
-  right: 0.5rem;
-  font-size: 2rem;
   border: none;
   outline: none;
-  background: transparent;
+  background-color: transparent;
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
 }
+
+/* ?===============================================================
+?=============================================================== */
 
 .searchBar-clock-space {
   grid-row: 2 / 3;
@@ -114,9 +108,44 @@ body {
 .clock {
   grid-row: 3 / 5;
   grid-column: 1 / 5;
-  background-color: rgb(255, 255, 255);
-  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.datetime {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  padding: 0.7rem 1.5rem 0.3rem;
+  border-radius: 2rem;
+}
+
+.date {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.time {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.2rem;
+}
+.time span:last-child {
+  font-size: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  padding: 0.1rem 0.05rem 0.1rem 0.2rem;
+  border-radius: 0.1rem;
+}
+
+/* ?===============================================================
+?=============================================================== */
+
 .clock-app-space {
   grid-row: 5 / 11;
   grid-column: 1 / 5;
